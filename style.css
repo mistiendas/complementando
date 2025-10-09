@@ -1,0 +1,129 @@
+#menu {
+  font-family: "Inter";
+  font-size: 20px;
+  justify-content: center;
+  list-style: none;
+  display: flex;
+  margin: auto;
+  font-weight: bold;
+  background-color: #ff6b6b;
+}
+
+#envios-info {
+  background: #6bffb5;
+  text-align: center;
+  padding: 0px;
+}
+
+#envios-p {
+  text-align: center;
+  animation: traslado 3s infinite alternate;
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  color: black;
+  display: inline-block;
+}
+
+#slogan {
+  font-family: "Bebas Neue";
+  font-size: 50px;
+  padding: 2%;
+  color: red;
+  animation: cambiarColor 8s infinite alternate;
+  background: linear-gradient(
+    135deg,
+    #ff6b6b,
+    #4ecdc4,
+    #45b7d1,
+    #96ceb4,
+    #feca57
+  );
+}
+
+@keyframes cambiarColor {
+  0% {
+    color: rgb(242, 68, 31);
+  }
+  20% {
+    color: rgb(61, 224, 213);
+  }
+
+  50% {
+    color: rgb(213, 224, 61);
+  }
+  80% {
+    color: rgb(159, 61, 224);
+  }
+
+  100% {
+    color: rgb(194, 72, 88);
+  }
+}
+
+@keyframes traslado {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+#menu,
+#slogan {
+  text-align: center;
+}
+
+#menu li {
+  padding: 10px;
+}
+
+#menu li:hover {
+  background: #913636;
+}
+
+#plantilla {
+  background-color: #96ceb4;
+  width: 30%;
+  height: auto;
+  border-style: double;
+  border-color: #4ecdc4;
+  border-radius: 8px;
+}
+
+#imagen {
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+#imagen2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 35%;
+  height: auto;
+  z-index: 100;
+  display: block;
+}
+
+#plantilla:hover #imagen2 {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media (min-width: 720px) {
+  #plantilla {
+    background-color: #96ceb4;
+    width: 50%;
+    height: 15%;
+    border-style: double;
+    border-color: #4ecdc4;
+    border-radius: 8px;
+  }
+
+  #imagen2 {
+    top: 25%;
+    width: 85%;
+  }
+}
