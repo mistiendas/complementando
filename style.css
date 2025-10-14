@@ -45,6 +45,7 @@
   0% {
     color: rgb(242, 68, 31);
   }
+
   20% {
     color: rgb(61, 224, 213);
   }
@@ -52,6 +53,7 @@
   50% {
     color: rgb(213, 224, 61);
   }
+
   80% {
     color: rgb(159, 61, 224);
   }
@@ -65,6 +67,7 @@
   0% {
     transform: translateX(50%);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -83,47 +86,74 @@
   background: #913636;
 }
 
-#plantilla {
+.plantilla {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  padding: 20px;
+}
+
+.contenedor {
   background-color: #96ceb4;
-  width: 30%;
+  width: calc(33.333% - 10px);
+
   height: auto;
   border-style: double;
   border-color: #4ecdc4;
   border-radius: 8px;
+  box-sizing: border-box;
+
+  text-align: center;
 }
 
 #imagen {
-  width: 100%;
+  width: 90%;
   height: auto;
   z-index: 1;
 }
+
 #imagen2 {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
-  width: 35%;
+  width: 15%;
   height: auto;
   z-index: 100;
   display: block;
+  border-radius: 200px;
 }
 
-#plantilla:hover #imagen2 {
-  transform: translate(-50%, -50%) scale(1);
+.contenedor:hover #imagen2 {
+  transform: translate(-50%, -50%) scale(2);
+  border-style: double;
+  border-color: #000000;
 }
 
-@media (min-width: 720px) {
-  #plantilla {
-    background-color: #96ceb4;
-    width: 50%;
-    height: 15%;
-    border-style: double;
-    border-color: #4ecdc4;
-    border-radius: 8px;
+html,
+body {
+  overflow-x: hidden; /* evita desbordes horizontales */
+  overflow-y: auto; /* permite hacer scroll vertical */
+}
+
+@media screen and (max-width: 720px) {
+  #imagen2 {
+    display: none;
+    position: static;
   }
 
-  #imagen2 {
-    top: 25%;
-    width: 85%;
+  .contenedor {
+    width: 40%;
+    margin-bottom: 20px;
+  }
+
+  #slogan {
+    font-size: 30px;
+    padding: 1%;
   }
 }
