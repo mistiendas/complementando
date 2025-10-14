@@ -135,18 +135,7 @@
   border-color: #000000;
 }
 
-html,
-body {
-  overflow-x: hidden; /* evita desbordes horizontales */
-  overflow-y: auto; /* permite hacer scroll vertical */
-}
-
 @media screen and (max-width: 720px) {
-  #imagen2 {
-    display: none;
-    position: static;
-  }
-
   .contenedor {
     width: 40%;
     margin-bottom: 20px;
@@ -155,5 +144,17 @@ body {
   #slogan {
     font-size: 30px;
     padding: 1%;
+  }
+
+  .contenedor:hover #imagen2 {
+    transform: translate(-50%, -200%) scale(2);
+    border-style: double;
+    border-color: #000000;
+  }
+
+  #menu {
+    font-size: 12px;
+
+    margin: 1px;
   }
 }
