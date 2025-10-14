@@ -23,6 +23,9 @@
   margin: 0px;
   color: black;
   display: inline-block;
+
+  overflow: hidden;
+  position: relative;
 }
 
 #slogan {
@@ -156,5 +159,9 @@
     font-size: 12px;
 
     margin: 1px;
+  }
+
+  body {
+    background-color: red;
   }
 }
