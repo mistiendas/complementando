@@ -162,6 +162,16 @@
   }
 
   body {
-    background-color: red;
+    background-color: blue;
+  }
+
+  @keyframes traslado {
+    0% {
+      transform: translateX(-2%);
+    }
+
+    100% {
+      transform: translateX(50%);
+    }
   }
 }
