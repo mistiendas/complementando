@@ -96,7 +96,7 @@
 
   justify-content: center;
 
-  gap: 20px;
+  gap: 10px;
 
   padding: 20px;
 }
@@ -150,7 +150,7 @@
   }
 
   .contenedor:hover #imagen2 {
-    transform: translate(-50%, -200%) scale(2);
+    transition: transform 0.5s ease;
     border-style: double;
     border-color: #000000;
   }
@@ -161,17 +161,17 @@
     margin: 1px;
   }
 
-  body {
-    background-color: blue;
-  }
-
   @keyframes traslado {
     0% {
       transform: translateX(-2%);
     }
 
     100% {
-      transform: translateX(50%);
+      transform: translateX(8%);
     }
+  }
+
+  .plantilla {
+    gap: 10px;
   }
 }
